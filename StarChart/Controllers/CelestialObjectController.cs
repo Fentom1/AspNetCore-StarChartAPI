@@ -21,6 +21,7 @@ namespace StarChart.Controllers
             this._context = context;
         }
 
+        // is called by 'https://localhost:44360/5'
         [HttpGet("{id:int}", Name ="GetById")]
         public IActionResult GetById(int id)
         {
@@ -33,6 +34,7 @@ namespace StarChart.Controllers
             return Ok(celesticalObject);
         }
 
+        // is called by 'https://localhost:44360/Sun'
         [HttpGet("{name}")]
         public IActionResult GetByName(string name)
         {
@@ -50,6 +52,7 @@ namespace StarChart.Controllers
             return Ok(celesticalsObjects);
         }
 
+        // is called by 'https://localhost:44360/'
         [HttpGet]
         public IActionResult GetAll()
         {
